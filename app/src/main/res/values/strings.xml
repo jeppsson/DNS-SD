@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">DNS-SD Client</string>
+    <string name="hint_enter_service_type">enter service type</string>
+    <string name="btn_search">Search</string>
+    <string name="btn_attributes">Attributes</string>
+
+    <string name="txt_label_tcp">TCP</string>
+    <string name="txt_label_udp">UDP</string>
+
+    <string name="txt_label_ip_address">IP Address</string>
+    <string name="txt_label_port">Port</string>
+    <string name="txt_label_service_type">Service Type</string>
+</resources>

@@ -1,0 +1,57 @@
+plugins {
+    id 'com.android.application'
+    id 'org.jetbrains.kotlin.android'
+}
+
+android {
+    compileSdk 32
+
+    defaultConfig {
+        applicationId "com.jeppsson.dnssd"
+        minSdk 26
+        targetSdk 32
+        versionCode 1
+        versionName "0.1"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled true
+            shrinkResources true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_11
+        targetCompatibility JavaVersion.VERSION_11
+    }
+    kotlinOptions {
+        jvmTarget = '11'
+    }
+    buildFeatures {
+        dataBinding true
+    }
+}
+
+dependencies {
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.6.0'
+    implementation 'androidx.activity:activity-ktx:1.4.0'
+    implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.4.1'
+    implementation 'androidx.lifecycle:lifecycle-livedata-ktx:2.4.1'
+    implementation 'androidx.lifecycle:lifecycle-common-java8:2.4.1'
+
+    implementation 'com.google.android.material:material:1.6.0'
+
+    // androidx
+    implementation 'androidx.appcompat:appcompat:1.4.1'
+    implementation 'androidx.lifecycle:lifecycle-runtime-ktx:2.4.1'
+    implementation 'androidx.recyclerview:recyclerview:1.2.1'
+
+    // Networking
+    implementation 'com.squareup.retrofit2:retrofit:2.9.0'
+    implementation "com.squareup.retrofit2:converter-moshi:2.9.0"
+    implementation 'com.squareup.moshi:moshi-kotlin:1.13.0'
+
+    // Logging
+    implementation 'com.jakewharton.timber:timber:5.0.1'
+}
