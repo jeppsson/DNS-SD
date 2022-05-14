@@ -5,9 +5,9 @@ plugins {
 
 android {
     compileSdk 32
+    namespace 'com.jeppsson.dnssd'
 
     defaultConfig {
-        applicationId "com.jeppsson.dnssd"
         minSdk 26
         targetSdk 32
         versionCode 1
